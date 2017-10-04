@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        /*for (var a = 0; a < 3; a++) {
+            console.log(a);
+        }
+        console.log(a);
+        for (let b = 0; b < 3; b++) {
+            console.log(b)
+        }
+        console.log(b)*/
+        // class person{
+        //     constructor(){
+        //         this.aaa = "aaaa"
+        //     }
+
+        //     sya(){
+        //         return this.aaa
+        //     }
+        // }
+
+        // var personclass = new person();
+        // alert(personclass.sya())
+        $(function () {
+            $("#btn_test").click(() => {
+                $.ajax({
+                    url: "http://localhost:8888",
+                    success: (data) => {
+                        alert("成功：" + data);
+                    },
+                    error: (Response) => {
+                        alert("错误" + JSON.stringify(Response));
+                    }
+                    // contentType: "json"
+                })
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <button id="btn_test">测试按钮</button>
+    <!-- <script>
+        alert(1)
+        $("#btn_test").click(function () {
+            alert("调用成功")
+        })
+
+    </script> -->
+</body>
+
+</html>
